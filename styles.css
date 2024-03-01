@@ -1,0 +1,146 @@
+body {
+    background: black;
+    color: white;
+    min-height: 100vh;
+    margin: 0 5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+header img {
+    width: 300px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav li a {
+    color: white;
+    text-decoration: none;
+    box-shadow: inset 0 0 0 0 #fac20b;
+    color: #fac20b;
+    margin: 0 -.25rem;
+    padding: 0 -.25rem;
+    transition: all .3s ease-in-out;
+    font-weight: bold;
+    padding: .25rem;
+}
+nav li a:hover {
+    box-shadow: inset 100px 0 0 0 #fac20b;
+    color: black;
+}
+
+main {
+    margin: 2rem 0;
+}
+article #promotion {
+    width: 100%;
+}
+#promotion img {
+    width: 100%;
+    object-fit: cover;
+    height: 40vh;
+}
+#promotion {
+    position: relative;
+}
+#promotion img {
+    filter: brightness(.7);
+}
+#promotion div {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    width: 50%;
+}
+#promotion h2 {
+    font-weight: bolder;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+#promotion p {
+    line-height: 1.5;
+}
+
+#products div {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+#products article {
+    flex: 1;
+    background: linear-gradient(#1b1b1b, #0f0f0f) padding-box,
+                linear-gradient(to top, rgba(190, 148, 10, 0.5), rgb(19, 17, 2), rgba(250, 194, 11, .7)) border-box;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    text-align: center;
+    margin-top: 1rem;
+    padding: .5rem;
+    min-width: 250px;
+    max-width: 250px;
+}
+#products article:not(:first-child) {
+    margin-left: 2.5rem;
+    margin-bottom: 0;
+}
+#products article img {
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+}
+#products article h4 {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: large;
+}
+#products article button, 
+#products a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    background: #fac20b;
+    border: none;
+    margin: 1rem 0;
+    padding: .5rem 1.5rem;
+    border-radius: 5px;
+    transition: all .3s ease;
+}
+#products > a:hover,
+#products article button:hover {
+    background: #d3b860;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+#products {
+    text-align: center;
+}
+
+footer {
+    padding: .5rem;
+    border-top: 1px solid #fac20b;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+footer img {
+    width: 100px;
+}
+
+@media only screen and (max-width: 450px) {
+    #products div {
+        justify-content: center;
+        align-content: center;
+    }
+    #products article {
+        margin: 1rem auto!important;
+    }
+}
